@@ -1,4 +1,4 @@
-package com.seailz.databaseapi;
+package ga.justreddy.wiki.databaseapi;
 
 import lombok.Data;
 

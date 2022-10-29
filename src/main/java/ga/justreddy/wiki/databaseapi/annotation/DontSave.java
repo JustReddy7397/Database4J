@@ -1,4 +1,4 @@
-package com.seailz.databaseapi.annotation;
+package ga.justreddy.wiki.databaseapi.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -6,12 +6,12 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Specify the column you'd like to insert this value into
+ * Specify to not save this field to the database
  *
  * @author Seailz
  */
-@Target({ElementType.FIELD, ElementType.PARAMETER})
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Column {
-    String value();
+public @interface DontSave {
 }
+

@@ -1,17 +1,12 @@
-package com.seailz.databaseapi.annotation;
+package ga.justreddy.wiki.databaseapi.annotation.constructor;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-/**
- * Specify to not save this field to the database
- *
- * @author Seailz
- */
-@Target(ElementType.FIELD)
+@Target(ElementType.CONSTRUCTOR)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface DontSave {
+public @interface DatabaseConstructor {
 }
 

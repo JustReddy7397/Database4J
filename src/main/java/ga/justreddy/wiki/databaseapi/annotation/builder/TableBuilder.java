@@ -1,7 +1,7 @@
-package com.seailz.databaseapi.annotation.builder;
+package ga.justreddy.wiki.databaseapi.annotation.builder;
 
-import com.seailz.databaseapi.Column;
-import com.seailz.databaseapi.ColumnType;
+import ga.justreddy.wiki.databaseapi.Column;
+import ga.justreddy.wiki.databaseapi.ColumnType;
 import lombok.Data;
 import org.jetbrains.annotations.NotNull;
 

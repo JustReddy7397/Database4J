@@ -1,4 +1,4 @@
-package com.seailz.databaseapi;
+package ga.justreddy.wiki.databaseapi;
 
 /**
  * Represents the type of value within a table
@@ -15,6 +15,7 @@ package com.seailz.databaseapi;
  * <p>{@code BYTE} represents a {@link Byte}</p>
  * <p>{@code TINYINT} represents a smaller {@link Integer}</p>
  * <p>{@code BLOB} represents a {@link java.sql.Blob}</p>
+ * <p>{@code LONGTEXT} represents a LONGTEXT</p>
  */
 public enum ColumnType {
 
@@ -28,7 +29,8 @@ public enum ColumnType {
     BYTE,
     DECIMAL,
     BLOB,
-    TINYINT
+    TINYINT,
+    LONGTEXT
 
 }
 

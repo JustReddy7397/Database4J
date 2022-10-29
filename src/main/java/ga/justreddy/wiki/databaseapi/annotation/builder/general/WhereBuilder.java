@@ -1,4 +1,4 @@
-package com.seailz.databaseapi.annotation.builder.general;
+package ga.justreddy.wiki.databaseapi.annotation.builder.general;
 
 import lombok.Getter;
 

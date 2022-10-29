@@ -1,5 +1,8 @@
 # Database API
 
+# Modified by me to suit my needs
+# ORIGINAL: https://github.com/seailz/Database4J 
+
 Interact with your MySQL databases with ease.
 ```xml
 		<repository>
@@ -84,7 +87,8 @@ column.setAllowNull(false); // (by default this is set to true)
     BYTE,
     DECIMAL,
     BLOB,
-    TINYINT
+    TINYINT,
+    LONGTEXT,
 ```
 
 #### Saving and Reading Java Objects

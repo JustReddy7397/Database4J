@@ -1,11 +1,11 @@
-package com.seailz.databaseapi;
+package ga.justreddy.wiki.databaseapi;
 
-import com.seailz.databaseapi.annotation.DontSave;
-import com.seailz.databaseapi.annotation.builder.InsertBuilder;
-import com.seailz.databaseapi.annotation.builder.LoginBuilder;
-import com.seailz.databaseapi.annotation.builder.TableBuilder;
-import com.seailz.databaseapi.annotation.builder.general.WhereBuilder;
-import com.seailz.databaseapi.annotation.constructor.DatabaseConstructor;
+import ga.justreddy.wiki.databaseapi.annotation.DontSave;
+import ga.justreddy.wiki.databaseapi.annotation.builder.InsertBuilder;
+import ga.justreddy.wiki.databaseapi.annotation.builder.LoginBuilder;
+import ga.justreddy.wiki.databaseapi.annotation.builder.TableBuilder;
+import ga.justreddy.wiki.databaseapi.annotation.builder.general.WhereBuilder;
+import ga.justreddy.wiki.databaseapi.annotation.constructor.DatabaseConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.SneakyThrows;
@@ -22,8 +22,6 @@ import java.lang.reflect.Parameter;
 import java.sql.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.logging.Level;
-import java.util.stream.Collectors;
 
 /**
  * <p>A way to interact with databases easier than JDBC.</p>
@@ -856,9 +854,9 @@ public class Database {
 
             // Checks the field's annotations
             if (field.isAnnotationPresent(DontSave.class)) continue;
-            if (field.isAnnotationPresent(com.seailz.databaseapi.annotation.Column.class)) {
+            if (field.isAnnotationPresent(ga.justreddy.wiki.databaseapi.annotation.Column.class)) {
                 // If there is an annotation, use the annotation's name instead of the field's name
-                key = field.getAnnotation(com.seailz.databaseapi.annotation.Column.class).value();
+                key = field.getAnnotation(ga.justreddy.wiki.databaseapi.annotation.Column.class).value();
                 return;
             }
 
@@ -877,9 +875,9 @@ public class Database {
 
             // Checks the field's annotations
             if (field.isAnnotationPresent(DontSave.class)) continue;
-            if (field.isAnnotationPresent(com.seailz.databaseapi.annotation.Column.class)) {
+            if (field.isAnnotationPresent(ga.justreddy.wiki.databaseapi.annotation.Column.class)) {
                 // If there is an annotation, use the annotation's name instead of the field's name
-                key = field.getAnnotation(com.seailz.databaseapi.annotation.Column.class).value();
+                key = field.getAnnotation(ga.justreddy.wiki.databaseapi.annotation.Column.class).value();
                 return;
             }
 
@@ -922,9 +920,9 @@ public class Database {
 
                 // Checks the field's annotations
                 if (field.isAnnotationPresent(DontSave.class)) continue;
-                if (field.isAnnotationPresent(com.seailz.databaseapi.annotation.Column.class)) {
+                if (field.isAnnotationPresent(ga.justreddy.wiki.databaseapi.annotation.Column.class)) {
                     // If there is an annotation, use the annotation's name instead of the field's name
-                    key = field.getAnnotation(com.seailz.databaseapi.annotation.Column.class).value();
+                    key = field.getAnnotation(ga.justreddy.wiki.databaseapi.annotation.Column.class).value();
                     return;
                 }
 
@@ -943,9 +941,9 @@ public class Database {
 
                 // Checks the field's annotations
                 if (field.isAnnotationPresent(DontSave.class)) continue;
-                if (field.isAnnotationPresent(com.seailz.databaseapi.annotation.Column.class)) {
+                if (field.isAnnotationPresent(ga.justreddy.wiki.databaseapi.annotation.Column.class)) {
                     // If there is an annotation, use the annotation's name instead of the field's name
-                    key = field.getAnnotation(com.seailz.databaseapi.annotation.Column.class).value();
+                    key = field.getAnnotation(ga.justreddy.wiki.databaseapi.annotation.Column.class).value();
                     return;
                 }
 
@@ -1011,7 +1009,8 @@ public class Database {
 
         for (Parameter p : constructor.getParameters()) {
             if (hasAnnotation(p))
-                parameters.add(keyValuesHashMap.get(p.getAnnotation(com.seailz.databaseapi.annotation.Column.class).value()));
+                parameters.add(keyValuesHashMap.get(p.getAnnotation(
+                    ga.justreddy.wiki.databaseapi.annotation.Column.class).value()));
         }
 
         if (debug)
@@ -1113,7 +1112,8 @@ public class Database {
 
         for (Parameter p : constructor.getParameters()) {
             if (hasAnnotation(p))
-                parameters.add(keyValuesHashMap.get(p.getAnnotation(com.seailz.databaseapi.annotation.Column.class).value()));
+                parameters.add(keyValuesHashMap.get(p.getAnnotation(
+                    ga.justreddy.wiki.databaseapi.annotation.Column.class).value()));
         }
 
         if (debug)
@@ -1159,7 +1159,8 @@ public class Database {
 
         for (Parameter p : constructor.getParameters()) {
             if (hasAnnotation(p))
-                parameters.add(keyValuesHashMap.get(p.getAnnotation(com.seailz.databaseapi.annotation.Column.class).value()));
+                parameters.add(keyValuesHashMap.get(p.getAnnotation(
+                    ga.justreddy.wiki.databaseapi.annotation.Column.class).value()));
         }
 
         if (debug)
@@ -1189,13 +1190,13 @@ public class Database {
     }
 
     /**
-     * Checks if a parameter has the {@link com.seailz.databaseapi.annotation.Column} annotation
+     * Checks if a parameter has the {@link ga.justreddy.wiki.databaseapi.annotation.Column} annotation
      *
      * @param param The parameter you'd like to check
-     * @return Whether the parameter has the {@link com.seailz.databaseapi.annotation.Column} annotation
+     * @return Whether the parameter has the {@link ga.justreddy.wiki.databaseapi.annotation.Column} annotation
      */
     private boolean hasAnnotation(Parameter param) {
-        return param.isAnnotationPresent(com.seailz.databaseapi.annotation.Column.class);
+        return param.isAnnotationPresent(ga.justreddy.wiki.databaseapi.annotation.Column.class);
     }
 
     /**
